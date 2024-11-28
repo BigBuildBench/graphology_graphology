@@ -1,0 +1,41 @@
+{
+  "name": "graphology-library",
+  "version": "0.8.0",
+  "description": "Graphology's standard library.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "browser": "browser.js",
+  "files": [
+    "*.js",
+    "*.d.ts",
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && rollup -c",
+    "prepublishOnly": "npm run test:types && npm run build",
+    "test": "npm run test:types",
+    "test:types": "ts-node test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graphology/graphology.git"
+  },
+  "keywords": [
+    "graph",
+    "graphology",
+    "library"
+  ],
+  "author": {
+    "name": "Guillaume Plique",
+    "url": "http://github.com/Yomguithereal"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/graphology/graphology/issues"
+  },
+  "homepage": "https://github.com/graphology/graphology#readme",
+  "peerDependencies": {
+    "graphology-types": ">=0.23.0"
+  }
+}
